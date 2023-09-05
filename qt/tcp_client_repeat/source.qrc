@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>C:/Users/99510/Desktop/pic/add_friend.png</file>
+        <file>C:/Users/99510/Desktop/pic/chat.png</file>
+        <file>C:/Users/99510/Desktop/pic/head.png</file>
+        <file>C:/Users/99510/Desktop/pic/login.png</file>
+    </qresource>
+</RCC>

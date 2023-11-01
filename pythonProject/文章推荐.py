@@ -45,7 +45,7 @@ def recommend(user_id, user_preferences, paper_vectors, top_k=5):
     return [paper_id for paper_id, similarity in recommended_papers]
 
 model=classifier()
-#读取论文摘要
+# 读取论文摘要
 # abstract = pd.read_csv('爬虫结果.csv')
 # paper_vectors = {}
 # for i, row in abstract.iterrows():
@@ -90,7 +90,13 @@ with open('2023-06-01_output_2.txt', 'r') as f:
                 vector = paper_vectors.get(paper_id)
                 if vector is not None:
                     user_preferences[user_id].append(vector)
-        print(user_id)
+        print(user_id,end=' ')
     # 计算每个用户的偏好向量
     for user_id, vectors in user_preferences.items():
         user_preferences[user_id] = torch.stack(vectors).mean(dim=0)
+        print(user_preferences)
+    # 保存用户偏好向量为CSV文件
+    with open('user_vectors.csv', 'w') as f:
+        writer = csv.writer(f)
+        for user_id, vector in user_preferences.items():
+            writer.writerow([user_id] + vector.tolist())

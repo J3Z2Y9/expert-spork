@@ -1,45 +1,51 @@
 {
-  "nodes": [
-    {
-      "id": "1",
-      "label": "Author A",
-      "x": 1.0,
-      "y": 2.0,
-      "cluster": 1,
-      "weight": 5
-    },
-    {
-      "id": "2",
-      "label": "Author B",
-      "x": 1.5,
-      "y": 1.5,
-      "cluster": 2,
-      "weight": 3
-    },
-    {
-      "id": "3",
-      "label": "Author C",
-      "x": -1.0,
-      "y": -2.0,
-      "cluster": 1,
-      "weight": 4
-    }
-  ],
-  "links": [
-    {
-      "source": "1",
-      "target": "2",
-      "value": 1
-    },
-    {
-      "source": "1",
-      "target": "3",
-      "value": 2
-    },
-    {
-      "source": "2",
-      "target": "3",
-      "value": 1.5
-    }
-  ]
+  "network": {
+    "items": [
+      {
+        "id": 1,
+        "label": "Node A",
+        "x": 0.1,
+        "y": 0.2,
+        "cluster": 1,
+        "weights": {
+          "Links": 2.0,
+          "Total link strength": 3.0,
+          "Documents": 1.0,
+          "Citations": 5.0,
+          "Norm. citations": 1.5
+        },
+        "scores": {
+          "Avg. pub. year": 2021,
+          "Avg. citations": 5.0,
+          "Avg. norm. citations": 1.5
+        }
+      },
+      {
+        "id": 2,
+        "label": "Node B",
+        "x": -0.1,
+        "y": -0.2,
+        "cluster": 2,
+        "weights": {
+          "Links": 1.0,
+          "Total link strength": 1.0,
+          "Documents": 1.0,
+          "Citations": 3.0,
+          "Norm. citations": 1.0
+        },
+        "scores": {
+          "Avg. pub. year": 2022,
+          "Avg. citations": 3.0,
+          "Avg. norm. citations": 1.0
+        }
+      }
+    ],
+    "links": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "strength": 2.0
+      }
+    ]
+  }
 }

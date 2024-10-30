@@ -3,15 +3,15 @@
     "items": [
       {
         "id": 1,
-        "label": "Node A",
+        "label": "Node 1",
         "x": 0.1,
         "y": 0.2,
         "cluster": 1,
         "weights": {
-          "Links": 2.0,
-          "Total link strength": 3.0,
-          "Documents": 1.0,
-          "Citations": 5.0,
+          "Links": 1,
+          "Total link strength": 1,
+          "Documents": 1,
+          "Citations": 5,
           "Norm. citations": 1.5
         },
         "scores": {
@@ -22,15 +22,15 @@
       },
       {
         "id": 2,
-        "label": "Node B",
+        "label": "Node 2",
         "x": -0.1,
         "y": -0.2,
         "cluster": 2,
         "weights": {
-          "Links": 1.0,
-          "Total link strength": 1.0,
-          "Documents": 1.0,
-          "Citations": 3.0,
+          "Links": 2,
+          "Total link strength": 2,
+          "Documents": 1,
+          "Citations": 3,
           "Norm. citations": 1.0
         },
         "scores": {
@@ -44,7 +44,7 @@
       {
         "source_id": 1,
         "target_id": 2,
-        "strength": 2.0
+        "strength": 1.0
       }
     ]
   }
